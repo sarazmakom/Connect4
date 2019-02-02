@@ -12,14 +12,14 @@ $(".column").on("click", function(e) {
     slotsInColumn.eq(i).addClass(curPlayer);
 
     if (checkForVictory(slotsInColumn)) {
-        $(".victory").append("<div>" + curPlayer + " player wins!" + "</div>");
+        $(".victory").append("<div>" + curPlayer + " wins!" + "</div>");
     } else if (checkForVictory($(".row" + i))) {
-        $(".victory").append("<div>" + curPlayer + " player wins!" + "</div>");
+        $(".victory").append("<div>" + curPlayer + " wins!" + "</div>");
     } else if (diagonalWin($(".slot"))) {
-        $(".victory").append("<div>" + curPlayer + " player wins!" + "</div>");
+        $(".victory").append("<div>" + curPlayer + " wins!" + "</div>");
     }
 
-    $("h2").on("mousedown", function(e) {
+    $("button").on("mousedown", function(e) {
         location.reload();
     });
 
